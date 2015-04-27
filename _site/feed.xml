@@ -5,7 +5,16 @@
     <atom:link href="https://payshares.co/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://payshares.co/</link>
     <description>Simplyfying Money for Everyone</description>
-    <pubDate>Mon, 27 Apr 2015 04:39:49 -0400</pubDate>
+    <pubDate>Mon, 27 Apr 2015 04:44:03 -0400</pubDate>
+    
+      <item>
+        <title>One Step Closer</title>
+        <link>https://payshares.co/blog/2015/05/01/one-step-closer.html</link>
+        <guid isPermaLink="true">https://payshares.co/blog/2015/05/01/one-step-closer.html</guid>
+        <description>&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/CDsWckwUkAAZ2p2.png:large&quot; alt=&quot;One Step Closer&quot; title=&quot;One Step Closer&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 01 May 2015 00:00:00 -0400</pubDate>
+      </item>
     
       <item>
         <title>Development Update 1</title>
@@ -180,17 +189,6 @@ naKF9vP6PmUDudBVkXHfr3cRScQideaMsFa9crvntk7x9VYPUTr SDF1
 
 </description>
         <pubDate>Fri, 01 May 2015 00:00:00 -0400</pubDate>
-      </item>
-    
-      <item>
-        <title>How to install Paysight</title>
-        <link>https://payshares.co/blog/2015/03/25/how-to-install-paysight.html</link>
-        <guid isPermaLink="true">https://payshares.co/blog/2015/03/25/how-to-install-paysight.html</guid>
-        <description>&lt;p&gt;git clone https://github.com/paytokens/paysight.git
-cd paysight
-npm install&lt;/p&gt;
-</description>
-        <pubDate>Wed, 25 Mar 2015 00:00:00 -0400</pubDate>
       </item>
     
       <item>
