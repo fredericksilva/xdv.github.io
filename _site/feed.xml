@@ -5,10 +5,10 @@
     <atom:link href="https://payshares.co/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://payshares.co/</link>
     <description>Simplyfying Money for Everyone</description>
-    <pubDate>Mon, 27 Apr 2015 04:38:12 -0400</pubDate>
+    <pubDate>Mon, 27 Apr 2015 04:39:49 -0400</pubDate>
     
       <item>
-        <title>Development Update</title>
+        <title>Development Update 1</title>
         <link>https://payshares.co/blog/2015/05/01/development-update-1.html</link>
         <guid isPermaLink="true">https://payshares.co/blog/2015/05/01/development-update-1.html</guid>
         <description>&lt;p&gt;Payshares is now forging consensus and the initial reference implementation of XPR is available at https://github.com/payshares/paysharesd&lt;/p&gt;

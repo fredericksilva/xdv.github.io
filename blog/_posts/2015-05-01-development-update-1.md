@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Development Update #1
+title: Development Update 1
 ---
 
 Payshares is now forging consensus and the initial reference implementation of XPR is available at https://github.com/payshares/paysharesd
