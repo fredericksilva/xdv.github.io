@@ -1,18 +1,18 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://czarcraft.co" # the base hostname & protocol for your site
+url: "https://payshares.co" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
   # Meta
-  title: Paytokens
-  avatar: XPT.png
+  title: Payshares
+  avatar: XPR.png
   gravatar: # email md5 hash
-  description: "The True Global Currency" # used by search engines
+  description: "Simplyfying Money for Everyone" # used by search engines
   
   # Header and footer text
   header_text: >
-    <h2>Paytokens : the true global currency.</h2>
+    <h2>Payshares - Simplyfying Money for Everyone</h2>
      
     <p class='lead'></p>
   footer_text: >
@@ -26,22 +26,22 @@ theme:
   dribbble: 
   facebook: 
   flickr: 
-  github: "paytokens"
+  github: "payshares"
   google_plus: 
   instagram: 
   linkedin:  # full URL
   pinterest: 
-  reddit: "paytokens"
+  reddit: "payshares"
   soundcloud: 
   stack_exchange:  # full URL
   steam: 
   tumblr: 
-  twitter: "paytokens"
+  twitter: "payshares"
   wordpress: 
   youtube: 
   
   # Scripts
-  google_analytics: "UA-21065583-29" # tracking id, e.g. "UA-000000-01"
+  google_analytics: "UA-21065583-30" # tracking id, e.g. "UA-000000-01"
   disqus_shortname:
   
   # Localization strings

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Paytokens</title>
-    <atom:link href="https://czarcraft.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <link>https://czarcraft.co/</link>
-    <description>The True Global Currency</description>
-    <pubDate>Mon, 30 Mar 2015 13:18:20 -0400</pubDate>
+    <title>Payshares</title>
+    <atom:link href="https://payshares.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://payshares.co/</link>
+    <description>Simplyfying Money for Everyone</description>
+    <pubDate>Mon, 27 Apr 2015 04:20:58 -0400</pubDate>
     
       <item>
         <title>How to install Paysight</title>
-        <link>https://czarcraft.co/blog/2015/03/25/how-to-install-paysight.html</link>
-        <guid isPermaLink="true">https://czarcraft.co/blog/2015/03/25/how-to-install-paysight.html</guid>
+        <link>https://payshares.co/blog/2015/03/25/how-to-install-paysight.html</link>
+        <guid isPermaLink="true">https://payshares.co/blog/2015/03/25/how-to-install-paysight.html</guid>
         <description>&lt;p&gt;git clone https://github.com/paytokens/paysight.git
 cd paysight
 npm install&lt;/p&gt;
@@ -20,8 +20,8 @@ npm install&lt;/p&gt;
     
       <item>
         <title>How to Create a Paytokens Node</title>
-        <link>https://czarcraft.co/blog/2015/03/19/how-to-create-a-paytokens-node.html</link>
-        <guid isPermaLink="true">https://czarcraft.co/blog/2015/03/19/how-to-create-a-paytokens-node.html</guid>
+        <link>https://payshares.co/blog/2015/03/19/how-to-create-a-paytokens-node.html</link>
+        <guid isPermaLink="true">https://payshares.co/blog/2015/03/19/how-to-create-a-paytokens-node.html</guid>
         <description>&lt;p&gt;Paytokens Servers are currently only supported on 64-Bit Ubuntu 14.04 LTS.  As of this writing, it is recommend to have a system with at least 32 GB of disk space accompanied by 4 GB of RAM and an Intel i5 equivalent or better.  A node targets 1,000 Users.  The install user must be a sudoer or have the appropriate access rights.  Core Paytokens installations are generally to be held by the home directory of the user.  These instructions may change and only serve as a guideline.&lt;/p&gt;
 
 &lt;p&gt;To get started, begin with a clean install, enter home directory and update repositories:&lt;/p&gt;
@@ -230,8 +230,8 @@ sudo ln -sf /etc/sv/nginx /etc/service/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
       <item>
         <title>Sample post</title>
-        <link>https://czarcraft.co/blog/2014/11/30/sample-post.html</link>
-        <guid isPermaLink="true">https://czarcraft.co/blog/2014/11/30/sample-post.html</guid>
+        <link>https://payshares.co/blog/2014/11/30/sample-post.html</link>
+        <guid isPermaLink="true">https://payshares.co/blog/2014/11/30/sample-post.html</guid>
         <description>&lt;p&gt;Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -259,8 +259,8 @@ sudo ln -sf /etc/sv/nginx /etc/service/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
       <item>
         <title>Feature images</title>
-        <link>https://czarcraft.co/blog/2014/11/29/feature-images.html</link>
-        <guid isPermaLink="true">https://czarcraft.co/blog/2014/11/29/feature-images.html</guid>
+        <link>https://payshares.co/blog/2014/11/29/feature-images.html</link>
+        <guid isPermaLink="true">https://payshares.co/blog/2014/11/29/feature-images.html</guid>
         <description>&lt;p&gt;This is an example of a post which includes a feature image specified in the front matter of the post. The feature image spans the full-width of the page, and is shown with the title on permalink pages.&lt;/p&gt;
 
 </description>
@@ -269,8 +269,8 @@ sudo ln -sf /etc/sv/nginx /etc/service/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     
       <item>
         <title>Markdown and HTML</title>
-        <link>https://czarcraft.co/blog/2014/11/28/markdown-and-html.html</link>
-        <guid isPermaLink="true">https://czarcraft.co/blog/2014/11/28/markdown-and-html.html</guid>
+        <link>https://payshares.co/blog/2014/11/28/markdown-and-html.html</link>
+        <guid isPermaLink="true">https://payshares.co/blog/2014/11/28/markdown-and-html.html</guid>
         <description>&lt;p&gt;Jeykll supports the use of &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; with inline HTML tags which makes it easier to quickly write posts with Jekyll, without having to worry too much about text formatting. A sample of the formatting follows.&lt;/p&gt;
 
 &lt;p&gt;Tables have also been extended from Markdown:&lt;/p&gt;
