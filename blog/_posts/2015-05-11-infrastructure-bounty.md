@@ -16,3 +16,4 @@ Bounty Requirements:
   40 GB Storage
   3 TB Bandwidth
 
+All inquiries should be directed to @divvynet on Twitter
