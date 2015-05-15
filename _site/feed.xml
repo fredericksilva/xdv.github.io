@@ -5,7 +5,28 @@
     <atom:link href="https://divvy.co/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://divvy.co/</link>
     <description>Sharing the global economy</description>
-    <pubDate>Tue, 09 Jun 2015 12:46:06 -0400</pubDate>
+    <pubDate>Fri, 15 May 2015 07:12:31 -0400</pubDate>
+    
+      <item>
+        <title>Infrastructure Bounty</title>
+        <link>https://divvy.co/blog/2015/05/11/infrastructure-bounty.html</link>
+        <guid isPermaLink="true">https://divvy.co/blog/2015/05/11/infrastructure-bounty.html</guid>
+        <description>&lt;p&gt;Bounty Size: 1 Million XDV Monthly&lt;/p&gt;
+
+&lt;p&gt;Bounty Total Slots: 10&lt;/p&gt;
+
+&lt;p&gt;Bounty Requirements:&lt;/p&gt;
+
+&lt;p&gt;Provide Divvy Development Team with at least 10 servers in the cloud of at least the following specs:&lt;/p&gt;
+
+&lt;p&gt;2 Cores
+  2 GB RAM
+  40 GB Storage
+  3 TB Bandwidth&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 11 May 2015 00:00:00 -0400</pubDate>
+      </item>
     
       <item>
         <title>Development Update 1</title>
