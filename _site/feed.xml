@@ -5,7 +5,53 @@
     <atom:link href="https://payshares.co/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://payshares.co/</link>
     <description>Simplyfying Money for Everyone</description>
-    <pubDate>Sat, 11 Apr 2015 10:29:05 -0400</pubDate>
+    <pubDate>Sat, 23 May 2015 10:37:38 -0400</pubDate>
+    
+      <item>
+        <title>Development Update 2</title>
+        <link>https://payshares.co/blog/2015/05/24/development-update-2.html</link>
+        <guid isPermaLink="true">https://payshares.co/blog/2015/05/24/development-update-2.html</guid>
+        <description>&lt;p&gt;Production on the Payshares API began during the first week of May and is the focus for our development team over the course of the next two quarters.  The Payshares ledger has been reset to the original snapshot three times during development of the API.  At time of this writing, we are ledger 40000 and expect to reach the next level passing ledger entry 100000.  As more nodes are added, stability of the ledger will increase.  Beta testers with provable peers to the Payshares Network may receive up to 10,000 XPR per verified node by communicating with the development team on Twitter @Payshares.&lt;/p&gt;
+
+&lt;p&gt;Our latest snapshot was taken on ledger #40100:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;s2&quot;&gt;&amp;quot;result&amp;quot;&lt;/span&gt; : &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&amp;quot;closed&amp;quot;&lt;/span&gt; : &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;s2&quot;&gt;&amp;quot;ledger&amp;quot;&lt;/span&gt; : &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;accepted&amp;quot;&lt;/span&gt; : &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;account_hash&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;3641AD7AF50D2B525970CA068AB6F5B7BD16A1816DC69FD4C2311AEE9F8BE31B&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;close_time&amp;quot;&lt;/span&gt; : 485812210,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;close_time_human&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;2015-May-24 19:50:10&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;close_time_resolution&amp;quot;&lt;/span&gt; : 10,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;closed&amp;quot;&lt;/span&gt; : &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;fee_pool&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;1000&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;hash&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;439ECE5E1B27B6B6BAE80FDC65D9A4E9B6751A2AE5B92F2CE6D8BD6E6446BF0A&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;inflate_seq&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;ledger_hash&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;439ECE5E1B27B6B6BAE80FDC65D9A4E9B6751A2AE5B92F2CE6D8BD6E6446BF0A&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;ledger_index&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;40100&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;parent_hash&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;7007BDA9D674382761B1FC4BFD01B7F58795098CB3ACB19E63C5D184E17049E8&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;seqNum&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;40100&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;totalCoins&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;99999999999999000&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;total_coins&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;99999999999999000&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;transaction_hash&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;0000000000000000000000000000000000000000000000000000000000000000&amp;quot;&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+      &lt;span class=&quot;s2&quot;&gt;&amp;quot;open&amp;quot;&lt;/span&gt; : &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;s2&quot;&gt;&amp;quot;ledger&amp;quot;&lt;/span&gt; : &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;closed&amp;quot;&lt;/span&gt; : &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;ledger_index&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;40101&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;parent_hash&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;439ECE5E1B27B6B6BAE80FDC65D9A4E9B6751A2AE5B92F2CE6D8BD6E6446BF0A&amp;quot;&lt;/span&gt;,
+            &lt;span class=&quot;s2&quot;&gt;&amp;quot;seqNum&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;40101&amp;quot;&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+      &lt;span class=&quot;s2&quot;&gt;&amp;quot;status&amp;quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&amp;quot;success&amp;quot;&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 24 May 2015 00:00:00 -0400</pubDate>
+      </item>
     
       <item>
         <title>One Step Closer</title>
