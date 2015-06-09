@@ -3,9 +3,9 @@ layout: post
 title: Development Update 1
 ---
 
-Payshares is now forging consensus and the initial reference implementation of XPR is available at https://github.com/payshares/paysharesd
+Divvy is now forging consensus and the initial reference implementation of XDV is available at https://github.com/divvy/divvyd
 
-Support is being provided for Ubuntu 14.04 LTS 64-bit.  It is recommended to have at least 2 GB RAM, a quad core processor, and adequate disk space.  Installation of paysharesd on Ubuntu 14.04 is relatively straightforward with administrator privileges:
+Support is being provided for Ubuntu 14.04 LTS 64-bit.  It is recommended to have at least 2 GB RAM, a quad core processor, and adequate disk space.  Installation of divvyd on Ubuntu 14.04 is relatively straightforward with administrator privileges:
 
 {% highlight bash %}
 sudo apt-get update
@@ -20,22 +20,22 @@ cd libsodium-0.6.1/
 ./configure
 make && make check && sudo make install
 cd ..
-git clone https://github.com/payshares/paysharesd.git
-cd paysharesd/
+git clone https://github.com/divvy/divvyd.git
+cd divvyd/
 scons
 {% endhighlight %}
 
-After compilation, paysharesd will be available within the 'build' directory.  paysharesd.cfg should be placed in the ~/.config/payshares directory.  Create the following directories:
+After compilation, divvyd will be available within the 'build' directory.  divvyd.cfg should be placed in the ~/.config/divvy directory.  Create the following directories:
 
 {% highlight bash %}
 (if not exists):
 mkdir ~/.config
 
-mkdir ~/.config/payshares
-mkdir ~/.config/payshares/db
+mkdir ~/.config/divvy
+mkdir ~/.config/divvy/db
 {% endhighlight %}
 
-The published documentation will be updated to reflect the initial validating node as referenced in the following example paysharesd.cfg:
+The published documentation will be updated to reflect the initial validating node as referenced in the following example divvyd.cfg:
 
 {% highlight bash %}
 # Allow other peers to connect to this server.
@@ -76,11 +76,11 @@ The published documentation will be updated to reflect the initial validating no
 [node_size]
 medium
 
-# This is primary persistent datastore for paysharesd.  This includes transaction
+# This is primary persistent datastore for divvyd.  This includes transaction
 # metadata, account states, and ledger headers.  
 [node_db]
 type=RocksDB
-path=<userpath>/.config/payshares/db/rocksdb
+path=<userpath>/.config/divvy/db/rocksdb
 open_files=2000
 filter_bits=12
 cache_mb=256
@@ -88,12 +88,12 @@ file_size_mb=8
 file_size_mult=2
 
 [database_path]
-<userpath>/.config/payshares/db
+<userpath>/.config/divvy/db
 
 # This needs to be an absolute directory reference, not a relative one.
 # Modify this value as required.
 [debug_logfile]
-<userpath>/.config/payshares/debug.log
+<userpath>/.config/divvy/debug.log
 
 [sntp_servers]
 time.windows.com
@@ -101,10 +101,10 @@ time.apple.com
 time.nist.gov
 pool.ntp.org
 
-# Where to find some other servers speaking the Payshares protocol.
+# Where to find some other servers speaking the Divvy protocol.
 #
 [ips]
-one.validator.payshares.co 52011
+one.validator.divvy.co 52011
 
 [validators]
 naKF9vP6PmUDudBVkXHfr3cRScQideaMsFa9crvntk7x9VYPUTr SDF1

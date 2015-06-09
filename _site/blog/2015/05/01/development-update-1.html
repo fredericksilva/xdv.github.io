@@ -3,8 +3,8 @@
 
   <head>
 <meta charset="utf-8">
-<title>Development Update 1 | Payshares</title>
-<meta name="description" content="Payshares is now forging consensus and the initial reference implementation of XPR is available at https://github.com/payshares/paysharesd">
+<title>Development Update 1 | Divvy</title>
+<meta name="description" content="Divvy is now forging consensus and the initial reference implementation of XDV is available at https://github.com/divvy/divvyd">
 <meta name="viewport" content="width=device-width, initial-scale=1">
  
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -18,13 +18,13 @@
 <link rel="stylesheet" href="/css/main.css">
 	
 	<!--Favicon-->
-	<link rel="shortcut icon" href="/img/XPR.png" type="image/x-icon">
+	<link rel="shortcut icon" href="/img/XDV.png" type="image/x-icon">
 	
 	<!-- Canonical -->
-	<link rel="canonical" href="https://payshares.co/blog/2015/05/01/development-update-1.html">
+	<link rel="canonical" href="https://divvy.co/blog/2015/05/01/development-update-1.html">
 	
 	<!-- RSS -->
-	<link rel="alternate" type="application/atom+xml" title="Payshares" href="https://payshares.co/feed.xml" />
+	<link rel="alternate" type="application/atom+xml" title="Divvy" href="https://divvy.co/feed.xml" />
 	
 	<!-- Font Awesome -->
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -52,11 +52,11 @@
 <div class="branding">
 
 <a href="/">
-<img class="avatar" src="/img/XPR.png" alt=""/>
+<img class="avatar" src="/img/divvy-icon-trans.png" alt=""/>
 </a>
 
 <h1 class="site-title">
-<a href="/">Payshares</a>
+<a href="/">Divvy</a>
 </h1>
 </div>
 <nav class="site-nav">
@@ -121,19 +121,13 @@
 
 
 <li>
-	<a href="https://github.com/payshares" title="Follow on GitHub">
+	<a href="https://github.com/xdv" title="Follow on GitHub">
 		<i class="fa fa-fw fa-github"></i>
 	</a>
 </li>
 
 
 
-<li>
-	<a href="https://plus.google.com/+PaysharesXPR" title="Follow on Google+">
-		<i class="fa fa-fw fa-google-plus"></i>
-	</a>
-</li>
-
 
 
 
@@ -143,7 +137,7 @@
 
 
 <li>
-	<a href="https://www.reddit.com/r/payshares" title="Follow on Reddit">
+	<a href="https://www.reddit.com/r/xdv" title="Follow on Reddit">
 		<i class="fa fa-fw fa-reddit"></i>
 	</a>
 </li>
@@ -159,7 +153,7 @@
 
 
 <li>
-	<a href="https://twitter.com/payshares" title="Follow on Twitter">
+	<a href="https://twitter.com/divvynet" title="Follow on Twitter">
 		<i class="fa fa-fw fa-twitter"></i>
 	</a>
 </li>
@@ -210,9 +204,9 @@
   </header>
 
   <section class="post-content">
-    <p>Payshares is now forging consensus and the initial reference implementation of XPR is available at https://github.com/payshares/paysharesd</p>
+    <p>Divvy is now forging consensus and the initial reference implementation of XDV is available at https://github.com/divvy/divvyd</p>
 
-<p>Support is being provided for Ubuntu 14.04 LTS 64-bit.  It is recommended to have at least 2 GB RAM, a quad core processor, and adequate disk space.  Installation of paysharesd on Ubuntu 14.04 is relatively straightforward with administrator privileges:</p>
+<p>Support is being provided for Ubuntu 14.04 LTS 64-bit.  It is recommended to have at least 2 GB RAM, a quad core processor, and adequate disk space.  Installation of divvyd on Ubuntu 14.04 is relatively straightforward with administrator privileges:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get update
 sudo apt-get upgrade
@@ -226,19 +220,19 @@ tar xzf LATEST.tar.gz
 ./configure
 make <span class="o">&amp;&amp;</span> make check <span class="o">&amp;&amp;</span> sudo make install
 <span class="nb">cd</span> ..
-git clone https://github.com/payshares/paysharesd.git
-<span class="nb">cd </span>paysharesd/
+git clone https://github.com/divvy/divvyd.git
+<span class="nb">cd </span>divvyd/
 scons</code></pre></div>
 
-<p>After compilation, paysharesd will be available within the ‘build’ directory.  paysharesd.cfg should be placed in the ~/.config/payshares directory.  Create the following directories:</p>
+<p>After compilation, divvyd will be available within the ‘build’ directory.  divvyd.cfg should be placed in the ~/.config/divvy directory.  Create the following directories:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span><span class="k">if</span> not exists<span class="o">)</span>:
 mkdir ~/.config
 
-mkdir ~/.config/payshares
-mkdir ~/.config/payshares/db</code></pre></div>
+mkdir ~/.config/divvy
+mkdir ~/.config/divvy/db</code></pre></div>
 
-<p>The published documentation will be updated to reflect the initial validating node as referenced in the following example paysharesd.cfg:</p>
+<p>The published documentation will be updated to reflect the initial validating node as referenced in the following example divvyd.cfg:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Allow other peers to connect to this server.</span>
 <span class="c">#</span>
@@ -278,11 +272,11 @@ mkdir ~/.config/payshares/db</code></pre></div>
 <span class="o">[</span>node_size<span class="o">]</span>
 medium
 
-<span class="c"># This is primary persistent datastore for paysharesd.  This includes transaction</span>
+<span class="c"># This is primary persistent datastore for divvyd.  This includes transaction</span>
 <span class="c"># metadata, account states, and ledger headers.  </span>
 <span class="o">[</span>node_db<span class="o">]</span>
 <span class="nb">type</span><span class="o">=</span>RocksDB
-<span class="nv">path</span><span class="o">=</span>&lt;userpath&gt;/.config/payshares/db/rocksdb
+<span class="nv">path</span><span class="o">=</span>&lt;userpath&gt;/.config/divvy/db/rocksdb
 <span class="nv">open_files</span><span class="o">=</span>2000
 <span class="nv">filter_bits</span><span class="o">=</span>12
 <span class="nv">cache_mb</span><span class="o">=</span>256
@@ -290,12 +284,12 @@ medium
 <span class="nv">file_size_mult</span><span class="o">=</span>2
 
 <span class="o">[</span>database_path<span class="o">]</span>
-&lt;userpath&gt;/.config/payshares/db
+&lt;userpath&gt;/.config/divvy/db
 
 <span class="c"># This needs to be an absolute directory reference, not a relative one.</span>
 <span class="c"># Modify this value as required.</span>
 <span class="o">[</span>debug_logfile<span class="o">]</span>
-&lt;userpath&gt;/.config/payshares/debug.log
+&lt;userpath&gt;/.config/divvy/debug.log
 
 <span class="o">[</span>sntp_servers<span class="o">]</span>
 time.windows.com
@@ -303,10 +297,10 @@ time.apple.com
 time.nist.gov
 pool.ntp.org
 
-<span class="c"># Where to find some other servers speaking the Payshares protocol.</span>
+<span class="c"># Where to find some other servers speaking the Divvy protocol.</span>
 <span class="c">#</span>
 <span class="o">[</span>ips<span class="o">]</span>
-one.validator.payshares.co 52011
+one.validator.divvy.co 52011
 
 <span class="o">[</span>validators<span class="o">]</span>
 naKF9vP6PmUDudBVkXHfr3cRScQideaMsFa9crvntk7x9VYPUTr SDF1

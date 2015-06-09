@@ -3,7 +3,7 @@ layout: post
 title: Development Update 2
 ---
 
-Production on the Payshares API began during the first week of May and is the focus for our development team over the course of the next two quarters.  The Payshares ledger has been reset to the original snapshot three times during development of the API.  At time of this writing, we are ledger 40000 and expect to reach the next level passing ledger entry 100000.  As more nodes are added, stability of the ledger will increase.  Beta testers with provable peers to the Payshares Network may receive up to 10,000 XPR per verified node by communicating with the development team on Twitter @Payshares.
+Production on the Divvy API began during the first week of May and is the focus for our development team over the course of the next two quarters.  The Divvy ledger has been reset to the original snapshot three times during development of the API.  At time of this writing, we are ledger 40000 and expect to reach the next level passing ledger entry 100000.  As more nodes are added, stability of the ledger will increase.  Beta testers with provable peers to the Divvy Network may receive up to 10,000 XDV per verified node by communicating with the development team on Twitter @Divvy.
 
 Our latest snapshot was taken on ledger #40100:
 

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Payshares</title>
-    <atom:link href="https://payshares.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <link>https://payshares.co/</link>
-    <description>Simplyfying Money for Everyone</description>
-    <pubDate>Sat, 23 May 2015 10:37:38 -0400</pubDate>
+    <title>Divvy</title>
+    <atom:link href="https://divvy.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://divvy.co/</link>
+    <description>Sharing the global economy</description>
+    <pubDate>Tue, 09 Jun 2015 12:37:48 -0400</pubDate>
     
       <item>
         <title>Development Update 2</title>
-        <link>https://payshares.co/blog/2015/05/24/development-update-2.html</link>
-        <guid isPermaLink="true">https://payshares.co/blog/2015/05/24/development-update-2.html</guid>
-        <description>&lt;p&gt;Production on the Payshares API began during the first week of May and is the focus for our development team over the course of the next two quarters.  The Payshares ledger has been reset to the original snapshot three times during development of the API.  At time of this writing, we are ledger 40000 and expect to reach the next level passing ledger entry 100000.  As more nodes are added, stability of the ledger will increase.  Beta testers with provable peers to the Payshares Network may receive up to 10,000 XPR per verified node by communicating with the development team on Twitter @Payshares.&lt;/p&gt;
+        <link>https://divvy.co/blog/2015/05/24/development-update-2.html</link>
+        <guid isPermaLink="true">https://divvy.co/blog/2015/05/24/development-update-2.html</guid>
+        <description>&lt;p&gt;Production on the Divvy API began during the first week of May and is the focus for our development team over the course of the next two quarters.  The Divvy ledger has been reset to the original snapshot three times during development of the API.  At time of this writing, we are ledger 40000 and expect to reach the next level passing ledger entry 100000.  As more nodes are added, stability of the ledger will increase.  Beta testers with provable peers to the Divvy Network may receive up to 10,000 XDV per verified node by communicating with the development team on Twitter @Divvy.&lt;/p&gt;
 
 &lt;p&gt;Our latest snapshot was taken on ledger #40100:&lt;/p&gt;
 
@@ -55,8 +55,8 @@
     
       <item>
         <title>One Step Closer</title>
-        <link>https://payshares.co/blog/2015/05/01/one-step-closer.html</link>
-        <guid isPermaLink="true">https://payshares.co/blog/2015/05/01/one-step-closer.html</guid>
+        <link>https://divvy.co/blog/2015/05/01/one-step-closer.html</link>
+        <guid isPermaLink="true">https://divvy.co/blog/2015/05/01/one-step-closer.html</guid>
         <description>&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/CDsWckwUkAAZ2p2.png:large&quot; alt=&quot;One Step Closer&quot; title=&quot;One Step Closer&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 01 May 2015 00:00:00 -0400</pubDate>
@@ -64,11 +64,11 @@
     
       <item>
         <title>Development Update 1</title>
-        <link>https://payshares.co/blog/2015/05/01/development-update-1.html</link>
-        <guid isPermaLink="true">https://payshares.co/blog/2015/05/01/development-update-1.html</guid>
-        <description>&lt;p&gt;Payshares is now forging consensus and the initial reference implementation of XPR is available at https://github.com/payshares/paysharesd&lt;/p&gt;
+        <link>https://divvy.co/blog/2015/05/01/development-update-1.html</link>
+        <guid isPermaLink="true">https://divvy.co/blog/2015/05/01/development-update-1.html</guid>
+        <description>&lt;p&gt;Divvy is now forging consensus and the initial reference implementation of XDV is available at https://github.com/divvy/divvyd&lt;/p&gt;
 
-&lt;p&gt;Support is being provided for Ubuntu 14.04 LTS 64-bit.  It is recommended to have at least 2 GB RAM, a quad core processor, and adequate disk space.  Installation of paysharesd on Ubuntu 14.04 is relatively straightforward with administrator privileges:&lt;/p&gt;
+&lt;p&gt;Support is being provided for Ubuntu 14.04 LTS 64-bit.  It is recommended to have at least 2 GB RAM, a quad core processor, and adequate disk space.  Installation of divvyd on Ubuntu 14.04 is relatively straightforward with administrator privileges:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get update
 sudo apt-get upgrade
@@ -82,19 +82,19 @@ tar xzf LATEST.tar.gz
 ./configure
 make &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; make check &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo make install
 &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
-git clone https://github.com/payshares/paysharesd.git
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;paysharesd/
+git clone https://github.com/divvy/divvyd.git
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;divvyd/
 scons&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;After compilation, paysharesd will be available within the ‘build’ directory.  paysharesd.cfg should be placed in the ~/.config/payshares directory.  Create the following directories:&lt;/p&gt;
+&lt;p&gt;After compilation, divvyd will be available within the ‘build’ directory.  divvyd.cfg should be placed in the ~/.config/divvy directory.  Create the following directories:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; not exists&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:
 mkdir ~/.config
 
-mkdir ~/.config/payshares
-mkdir ~/.config/payshares/db&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+mkdir ~/.config/divvy
+mkdir ~/.config/divvy/db&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;The published documentation will be updated to reflect the initial validating node as referenced in the following example paysharesd.cfg:&lt;/p&gt;
+&lt;p&gt;The published documentation will be updated to reflect the initial validating node as referenced in the following example divvyd.cfg:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Allow other peers to connect to this server.&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
@@ -134,11 +134,11 @@ mkdir ~/.config/payshares/db&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;node_size&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 medium
 
-&lt;span class=&quot;c&quot;&gt;# This is primary persistent datastore for paysharesd.  This includes transaction&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# This is primary persistent datastore for divvyd.  This includes transaction&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# metadata, account states, and ledger headers.  &lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;node_db&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;RocksDB
-&lt;span class=&quot;nv&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;userpath&amp;gt;/.config/payshares/db/rocksdb
+&lt;span class=&quot;nv&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;userpath&amp;gt;/.config/divvy/db/rocksdb
 &lt;span class=&quot;nv&quot;&gt;open_files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2000
 &lt;span class=&quot;nv&quot;&gt;filter_bits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;12
 &lt;span class=&quot;nv&quot;&gt;cache_mb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;256
@@ -146,12 +146,12 @@ medium
 &lt;span class=&quot;nv&quot;&gt;file_size_mult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2
 
 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;database_path&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-&amp;lt;userpath&amp;gt;/.config/payshares/db
+&amp;lt;userpath&amp;gt;/.config/divvy/db
 
 &lt;span class=&quot;c&quot;&gt;# This needs to be an absolute directory reference, not a relative one.&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# Modify this value as required.&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;debug_logfile&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-&amp;lt;userpath&amp;gt;/.config/payshares/debug.log
+&amp;lt;userpath&amp;gt;/.config/divvy/debug.log
 
 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;sntp_servers&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 time.windows.com
@@ -159,10 +159,10 @@ time.apple.com
 time.nist.gov
 pool.ntp.org
 
-&lt;span class=&quot;c&quot;&gt;# Where to find some other servers speaking the Payshares protocol.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Where to find some other servers speaking the Divvy protocol.&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;#&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;ips&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-one.validator.payshares.co 52011
+one.validator.divvy.co 52011
 
 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;validators&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
 naKF9vP6PmUDudBVkXHfr3cRScQideaMsFa9crvntk7x9VYPUTr SDF1
@@ -239,8 +239,8 @@ naKF9vP6PmUDudBVkXHfr3cRScQideaMsFa9crvntk7x9VYPUTr SDF1
     
       <item>
         <title>Sample post</title>
-        <link>https://payshares.co/blog/2014/11/30/sample-post.html</link>
-        <guid isPermaLink="true">https://payshares.co/blog/2014/11/30/sample-post.html</guid>
+        <link>https://divvy.co/blog/2014/11/30/sample-post.html</link>
+        <guid isPermaLink="true">https://divvy.co/blog/2014/11/30/sample-post.html</guid>
         <description>&lt;p&gt;Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -268,8 +268,8 @@ naKF9vP6PmUDudBVkXHfr3cRScQideaMsFa9crvntk7x9VYPUTr SDF1
     
       <item>
         <title>Feature images</title>
-        <link>https://payshares.co/blog/2014/11/29/feature-images.html</link>
-        <guid isPermaLink="true">https://payshares.co/blog/2014/11/29/feature-images.html</guid>
+        <link>https://divvy.co/blog/2014/11/29/feature-images.html</link>
+        <guid isPermaLink="true">https://divvy.co/blog/2014/11/29/feature-images.html</guid>
         <description>&lt;p&gt;This is an example of a post which includes a feature image specified in the front matter of the post. The feature image spans the full-width of the page, and is shown with the title on permalink pages.&lt;/p&gt;
 
 </description>
@@ -278,8 +278,8 @@ naKF9vP6PmUDudBVkXHfr3cRScQideaMsFa9crvntk7x9VYPUTr SDF1
     
       <item>
         <title>Markdown and HTML</title>
-        <link>https://payshares.co/blog/2014/11/28/markdown-and-html.html</link>
-        <guid isPermaLink="true">https://payshares.co/blog/2014/11/28/markdown-and-html.html</guid>
+        <link>https://divvy.co/blog/2014/11/28/markdown-and-html.html</link>
+        <guid isPermaLink="true">https://divvy.co/blog/2014/11/28/markdown-and-html.html</guid>
         <description>&lt;p&gt;Jeykll supports the use of &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt; with inline HTML tags which makes it easier to quickly write posts with Jekyll, without having to worry too much about text formatting. A sample of the formatting follows.&lt;/p&gt;
 
 &lt;p&gt;Tables have also been extended from Markdown:&lt;/p&gt;

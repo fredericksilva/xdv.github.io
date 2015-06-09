@@ -1,18 +1,18 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://payshares.co" # the base hostname & protocol for your site
+url: "https://divvy.co" # the base hostname & protocol for your site
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
   # Meta
-  title: Payshares
-  avatar: XPR.png
+  title: Divvy
+  avatar: divvy-icon-trans.png
   gravatar: # email md5 hash
-  description: "Simplyfying Money for Everyone" # used by search engines
+  description: "Sharing the global economy" # used by search engines
   
   # Header and footer text
   header_text: >
-    <h2>Payshares - Simplyfying Money for Everyone</h2>
+    <h2>Divvy - Sharing the global economy</h2>
      
     <p class='lead'></p>
   footer_text: >
@@ -26,17 +26,17 @@ theme:
   dribbble: 
   facebook: 
   flickr: 
-  github: "payshares"
-  google_plus: "+PaysharesXPR"
+  github: "xdv"
+  google_plus: 
   instagram: 
   linkedin:  # full URL
   pinterest: 
-  reddit: "payshares"
+  reddit: "xdv"
   soundcloud: 
   stack_exchange:  # full URL
   steam: 
   tumblr: 
-  twitter: "payshares"
+  twitter: "divvynet"
   wordpress: 
   youtube: 
   
