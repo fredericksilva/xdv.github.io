@@ -4,7 +4,7 @@
   <head>
 <meta charset="utf-8">
 <title>Development Update 1 | Divvy</title>
-<meta name="description" content="Divvy is now forging consensus and the initial reference implementation of XDV is available at https://github.com/divvy/divvyd">
+<meta name="description" content="Divvy first reached stable consensus on June 10, 2015 at 7 A.M.  The Original Genesis Ledger will be preserved for historical purposes.  A copy of ledger #7 ...">
 <meta name="viewport" content="width=device-width, initial-scale=1">
  
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -98,8 +98,6 @@
 <li>
 <a class="page-link" href="/developers/">Developers</a>
 </li>
-
-
 
 
 
@@ -204,167 +202,34 @@
   </header>
 
   <section class="post-content">
-    <p>Divvy is now forging consensus and the initial reference implementation of XDV is available at https://github.com/divvy/divvyd</p>
-
-<p>Support is being provided for Ubuntu 14.04 LTS 64-bit.  It is recommended to have at least 2 GB RAM, a quad core processor, and adequate disk space.  Installation of divvyd on Ubuntu 14.04 is relatively straightforward with administrator privileges:</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install git autoconf autogen automake build-essential software-properties-common libboost-all-dev libcurl4-openssl-dev libdb-dev libdb++-dev libgmp3-dev libminiupnpc-dev libmpfr-dev libssl-dev libcurl4-openssl-dev libjansson-dev pax-utils
-sudo apt-get install git scons ctags pkg-config protobuf-compiler libprotobuf-dev libssl-dev python-software-properties libboost1.55-all-dev g++ make
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 <span class="m">40</span> --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
-sudo update-alternatives --config gcc
-wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz
-tar xzf LATEST.tar.gz
-<span class="nb">cd </span>libsodium-0.6.1/
-./configure
-make <span class="o">&amp;&amp;</span> make check <span class="o">&amp;&amp;</span> sudo make install
-<span class="nb">cd</span> ..
-git clone https://github.com/divvy/divvyd.git
-<span class="nb">cd </span>divvyd/
-scons</code></pre></div>
-
-<p>After compilation, divvyd will be available within the ‘build’ directory.  divvyd.cfg should be placed in the ~/.config/divvy directory.  Create the following directories:</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">(</span><span class="k">if</span> not exists<span class="o">)</span>:
-mkdir ~/.config
-
-mkdir ~/.config/divvy
-mkdir ~/.config/divvy/db</code></pre></div>
-
-<p>The published documentation will be updated to reflect the initial validating node as referenced in the following example divvyd.cfg:</p>
-
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Allow other peers to connect to this server.</span>
-<span class="c">#</span>
-<span class="o">[</span>peer_ip<span class="o">]</span>
-0.0.0.0
-
-<span class="o">[</span>peer_port<span class="o">]</span>
-52011
-
-<span class="c"># Allow untrusted clients to connect to this server.</span>
-<span class="c">#</span>
-<span class="o">[</span>websocket_public_ip<span class="o">]</span>
-0.0.0.0
-
-<span class="o">[</span>websocket_public_port<span class="o">]</span>
-5016
-
-<span class="c"># Provide trusted websocket ADMIN access to the localhost.</span>
-<span class="c">#</span>
-<span class="o">[</span>websocket_ip<span class="o">]</span>
-127.0.0.1
-
-<span class="o">[</span>websocket_port<span class="o">]</span>
-6016
-
-<span class="c"># Provide trusted json-rpc ADMIN access to the localhost.</span>
-<span class="c">#</span>
-<span class="o">[</span>rpc_ip<span class="o">]</span>
-127.0.0.1
-
-<span class="o">[</span>rpc_port<span class="o">]</span>
-5015
-
-<span class="o">[</span>rpc_allow_remote<span class="o">]</span>
-0
-
-<span class="o">[</span>node_size<span class="o">]</span>
-medium
-
-<span class="c"># This is primary persistent datastore for divvyd.  This includes transaction</span>
-<span class="c"># metadata, account states, and ledger headers.  </span>
-<span class="o">[</span>node_db<span class="o">]</span>
-<span class="nb">type</span><span class="o">=</span>RocksDB
-<span class="nv">path</span><span class="o">=</span>&lt;userpath&gt;/.config/divvy/db/rocksdb
-<span class="nv">open_files</span><span class="o">=</span>2000
-<span class="nv">filter_bits</span><span class="o">=</span>12
-<span class="nv">cache_mb</span><span class="o">=</span>256
-<span class="nv">file_size_mb</span><span class="o">=</span>8
-<span class="nv">file_size_mult</span><span class="o">=</span>2
-
-<span class="o">[</span>database_path<span class="o">]</span>
-&lt;userpath&gt;/.config/divvy/db
-
-<span class="c"># This needs to be an absolute directory reference, not a relative one.</span>
-<span class="c"># Modify this value as required.</span>
-<span class="o">[</span>debug_logfile<span class="o">]</span>
-&lt;userpath&gt;/.config/divvy/debug.log
-
-<span class="o">[</span>sntp_servers<span class="o">]</span>
-time.windows.com
-time.apple.com
-time.nist.gov
-pool.ntp.org
-
-<span class="c"># Where to find some other servers speaking the Divvy protocol.</span>
-<span class="c">#</span>
-<span class="o">[</span>ips<span class="o">]</span>
-one.validator.divvy.co 52011
-
-<span class="o">[</span>validators<span class="o">]</span>
-naKF9vP6PmUDudBVkXHfr3cRScQideaMsFa9crvntk7x9VYPUTr SDF1
-
-<span class="c"># Ditto.</span>
-<span class="o">[</span>validation_quorum<span class="o">]</span>
-1
-
-<span class="o">[</span>consensus_threshold<span class="o">]</span>
--1
-
-<span class="c"># Turn down default logging to save disk space in the long run.</span>
-<span class="c"># Valid values here are trace, debug, info, warning, error, and fatal</span>
-<span class="o">[</span>rpc_startup<span class="o">]</span>
-<span class="o">{</span> <span class="s2">&quot;command&quot;</span>: <span class="s2">&quot;log_level&quot;</span>, <span class="s2">&quot;severity&quot;</span>: <span class="s2">&quot;warning&quot;</span> <span class="o">}</span>
-
-<span class="c"># Configure SSL for WebSockets.  Not enabled by default because not everybody</span>
-<span class="c"># has an SSL cert on their server, but if you uncomment the following lines and</span>
-<span class="c"># set the path to the SSL certificate and private key the WebSockets protocol</span>
-<span class="c"># will be protected by SSL/TLS.</span>
-<span class="c">#[websocket_secure]</span>
-<span class="c">#1</span>
-
-<span class="c">#[websocket_ssl_cert]</span>
-<span class="c">#/etc/ssl/certs/server.crt</span>
-
-<span class="c">#[websocket_ssl_key]</span>
-<span class="c">#/etc/ssl/private/server.key</span>
-
-<span class="c"># Defaults to 0 (&quot;no&quot;) so that you can use self-signed SSL certificates for</span>
-<span class="c"># development, or internally.</span>
-<span class="c">#[ssl_verify]</span>
-<span class="c">#0</span></code></pre></div>
-
-<p>Our latest snapshot was taken on ledger #2271:</p>
+    <p>Divvy first reached stable consensus on June 10, 2015 at 7 A.M.  The Original Genesis Ledger will be preserved for historical purposes.  A copy of ledger #7 is provided as reference to the original ledger:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">{</span>
    <span class="s2">&quot;result&quot;</span> : <span class="o">{</span>
       <span class="s2">&quot;closed&quot;</span> : <span class="o">{</span>
          <span class="s2">&quot;ledger&quot;</span> : <span class="o">{</span>
             <span class="s2">&quot;accepted&quot;</span> : <span class="nb">true</span>,
-            <span class="s2">&quot;account_hash&quot;</span> : <span class="s2">&quot;3132824E4160B0A93FCA8637AEA85F542EB7D6F40EC85E0F78E05DB3CC77285A&quot;</span>,
-            <span class="s2">&quot;close_time&quot;</span> : 483487240,
-            <span class="s2">&quot;close_time_human&quot;</span> : <span class="s2">&quot;2015-Apr-27 22:00:40&quot;</span>,
+            <span class="s2">&quot;account_hash&quot;</span> : <span class="s2">&quot;2DBFDF69951BED26013BFEE79E5E32C489D147EA03063A4C73EAE1CAEC2E507B&quot;</span>,
+            <span class="s2">&quot;close_time&quot;</span> : 487236580,
+            <span class="s2">&quot;close_time_human&quot;</span> : <span class="s2">&quot;2015-Jun-10 07:29:40&quot;</span>,
             <span class="s2">&quot;close_time_resolution&quot;</span> : 10,
             <span class="s2">&quot;closed&quot;</span> : <span class="nb">true</span>,
-            <span class="s2">&quot;fee_pool&quot;</span> : <span class="s2">&quot;1000&quot;</span>,
-            <span class="s2">&quot;hash&quot;</span> : <span class="s2">&quot;3B4D4D27C8582E012857DBB14A152F2B775BCD1D328C413283BBEF92DCF0C55B&quot;</span>,
-            <span class="s2">&quot;inflate_seq&quot;</span> : <span class="s2">&quot;1&quot;</span>,
-            <span class="s2">&quot;ledger_hash&quot;</span> : <span class="s2">&quot;3B4D4D27C8582E012857DBB14A152F2B775BCD1D328C413283BBEF92DCF0C55B&quot;</span>,
-            <span class="s2">&quot;ledger_index&quot;</span> : <span class="s2">&quot;2271&quot;</span>,
-            <span class="s2">&quot;parent_hash&quot;</span> : <span class="s2">&quot;48C16D6614AF91901CEA09121A8F0B621BFD055A85F01B8254C4A973A868D42C&quot;</span>,
-            <span class="s2">&quot;seqNum&quot;</span> : <span class="s2">&quot;2271&quot;</span>,
-            <span class="s2">&quot;totalCoins&quot;</span> : <span class="s2">&quot;99999999999999000&quot;</span>,
-            <span class="s2">&quot;total_coins&quot;</span> : <span class="s2">&quot;99999999999999000&quot;</span>,
+            <span class="s2">&quot;hash&quot;</span> : <span class="s2">&quot;6013A3995DF68E94442706A5D590450E8B43CAC57841781CCE3687735696B278&quot;</span>,
+            <span class="s2">&quot;ledger_hash&quot;</span> : <span class="s2">&quot;6013A3995DF68E94442706A5D590450E8B43CAC57841781CCE3687735696B278&quot;</span>,
+            <span class="s2">&quot;ledger_index&quot;</span> : <span class="s2">&quot;55&quot;</span>,
+            <span class="s2">&quot;parent_hash&quot;</span> : <span class="s2">&quot;8B84DBF1523BB2672865973A5D4EB0E12D462521FFA68C39ACF81A0DE99218C6&quot;</span>,
+            <span class="s2">&quot;seqNum&quot;</span> : <span class="s2">&quot;55&quot;</span>,
+            <span class="s2">&quot;totalCoins&quot;</span> : <span class="s2">&quot;100000000000000000&quot;</span>,
+            <span class="s2">&quot;total_coins&quot;</span> : <span class="s2">&quot;100000000000000000&quot;</span>,
             <span class="s2">&quot;transaction_hash&quot;</span> : <span class="s2">&quot;0000000000000000000000000000000000000000000000000000000000000000&quot;</span>
          <span class="o">}</span>
       <span class="o">}</span>,
       <span class="s2">&quot;open&quot;</span> : <span class="o">{</span>
          <span class="s2">&quot;ledger&quot;</span> : <span class="o">{</span>
             <span class="s2">&quot;closed&quot;</span> : <span class="nb">false</span>,
-            <span class="s2">&quot;ledger_index&quot;</span> : <span class="s2">&quot;2272&quot;</span>,
-            <span class="s2">&quot;parent_hash&quot;</span> : <span class="s2">&quot;3B4D4D27C8582E012857DBB14A152F2B775BCD1D328C413283BBEF92DCF0C55B&quot;</span>,
-            <span class="s2">&quot;seqNum&quot;</span> : <span class="s2">&quot;2272&quot;</span>
+            <span class="s2">&quot;ledger_index&quot;</span> : <span class="s2">&quot;56&quot;</span>,
+            <span class="s2">&quot;parent_hash&quot;</span> : <span class="s2">&quot;6013A3995DF68E94442706A5D590450E8B43CAC57841781CCE3687735696B278&quot;</span>,
+            <span class="s2">&quot;seqNum&quot;</span> : <span class="s2">&quot;56&quot;</span>
          <span class="o">}</span>
       <span class="o">}</span>,
       <span class="s2">&quot;status&quot;</span> : <span class="s2">&quot;success&quot;</span>
